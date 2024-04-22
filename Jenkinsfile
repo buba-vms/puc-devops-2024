@@ -14,18 +14,19 @@ pipeline {
                 bat 'echo "Testing React project..."'
             }
         }
-        stage('Deploy') {
-            steps {
-                bat 'echo "Deploying React project..."'
-                bat 'npm start'
-            }
-        }
         stage('Python Script') {
             steps {
                 bat 'echo "Running Python script..."'
                 bat 'python hello_world.py' // 
             }
         }
+        stage('Deploy') {
+            steps {
+                bat 'echo "Deploying React project..."'
+                bat 'npm start'
+            }
+        }
+
     }
 }
 
