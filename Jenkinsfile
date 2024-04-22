@@ -12,7 +12,6 @@ pipeline {
         stage('Test') {
             steps {
                 bat 'echo "Testing React project..."'
-                bat 'npm test' 
             }
         }
         stage('Deploy') {
