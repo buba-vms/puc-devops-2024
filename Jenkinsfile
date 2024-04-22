@@ -4,27 +4,27 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "Building React project..."'
-                sh 'npm install' 
-                sh 'npm run build' 
+                bat 'echo "Building React project..."'
+                bat 'npm install' 
+                shbat'npm run build' 
             }
         }
         stage('Test') {
             steps {
-                sh 'echo "Testing React project..."'
-                sh 'npm test' 
+                bat 'echo "Testing React project..."'
+                bat 'npm test' 
             }
         }
         stage('Deploy') {
             steps {
-                sh 'echo "Deploying React project..."'
-                sh 'npm start'
+                bat 'echo "Deploying React project..."'
+                bat 'npm start'
             }
         }
         stage('Python Script') {
             steps {
-                sh 'echo "Running Python script..."'
-                sh 'python hello_world.py' // 
+                bat 'echo "Running Python script..."'
+                bat 'python hello_world.py' // 
             }
         }
     }
