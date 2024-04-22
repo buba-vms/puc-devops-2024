@@ -6,7 +6,7 @@ pipeline {
             steps {
                 bat 'echo "Building React project..."'
                 bat 'npm install' 
-                shbat'npm run build' 
+                bat'npm run build' 
             }
         }
         stage('Test') {
